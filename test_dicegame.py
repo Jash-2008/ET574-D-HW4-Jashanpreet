@@ -1,3 +1,6 @@
+# Name: Jashanpreet Kaur
+# QCC ID:24648806
+# ET574 Homework 4 - Dice Game Simulator
 # test_dicegame.py
 # Unit tests for DiceGame assignment
 
