@@ -72,8 +72,19 @@ class TestDiceGame(unittest.TestCase):
         self.assertGreater(len(set(roll2_list)), 1)
 
     # --- Students: Add 3 more test cases below ---
+    def test_play_round_dice_values_within_bounds(self):
+        roll1, roll2, total, result = self.game.play_round()
+        self.assertIn(roll1, range(1, 7))
+        self.assertIn(roll2, range(1, 7))
 
+    def test_play_round_total_is_sum(self):
+        roll1, roll2, total, result = self.game.play_round()
+        self.assertEqual(total, roll1 + roll2)
 
+    def test_play_round_result_is_correct(self):
+        roll1, roll2, total, result = self.game.play_round()
+        expected = self.game.evaluate_roll(total)
+        self.assertEqual(result, expected)
 
 
 
