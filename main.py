@@ -6,11 +6,10 @@ import random
 
 
 class Die:
-    def __init__(self, max_side=6):
-        self.max_side = max_side
-
+  def __init__(self, sides=6):
+    self.sides = sides
     def roll(self):
-        return random.randint(1, self.max_side)
+       return random.randint(1, self.sides)
 
 
 class DiceGame:
